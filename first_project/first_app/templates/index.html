@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static  %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image blending</title>
+    <link rel="stylesheet" href="{%static "css/style.css"%}">
+</head>
+<body>
+    <form method='post' enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <label for="blending">Choose a blending technique</label>
+        
+        <select id="blending" name="blend-tech">
+          <option value="half-half" >half-half blending</option>
+          <option value="image-within-image">image within image</option>
+          
+        </select><br>
+            <label for="myfile">Choose your first image</label>
+            <input type="file" id="myfile1" name="myfile1"><br><br>
+            <label for="myfile">Choose your second image</label>
+
+          
+            <input type="file" id="myfile2" name="myfile2" ><br><br>
+            <input type="submit">
+          
+          
+      </form>
+
+  <!--  <h1>this is a picture of nature</h1>
+    <img src="{% static "images/nature.jpeg" %}" alt="nature image this is">-->
+    
+   <!--{{insert_me}}-->
+</body>
+</html>
